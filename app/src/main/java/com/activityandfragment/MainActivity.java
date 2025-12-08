@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             FragmentManager manager = getSupportFragmentManager();
-            manager.beginTransaction().replace(R.id.activity_layout,new DemoFragment()).commit();
+            manager.beginTransaction().replace(R.id.activity_layout,new DemoFragment()).addToBackStack("").commit();
         }
     });
 
