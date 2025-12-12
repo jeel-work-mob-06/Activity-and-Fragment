@@ -14,7 +14,7 @@
         android:drawableLeft="@drawable/baseline_calendar_month_24"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_25sdp"
         android:hint="   Select Date"
         />
     <EditText
@@ -24,5 +24,22 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_10sdp"
         android:hint="   Select Time"
+        />
+
+    <Button
+        style="@style/button_1"
+        android:id="@+id/open_tab"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:text="TabDemo Activity"
+        android:fontFamily="monospace"
+        />
+    <Button
+        style="@style/button_1"
+        android:id="@+id/open_frag"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:text="Fragment Activity"
+        android:fontFamily="monospace"
         />
 </LinearLayout>

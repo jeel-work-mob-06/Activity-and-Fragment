@@ -2,8 +2,10 @@ package com.activityandfragment;
 
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
@@ -23,6 +25,7 @@ public class DateTimeActivity2 extends AppCompatActivity {
         EditText dateEdit,timeEdit;
         Calendar calendar;
         int iHour = 0,iMinute = 0;
+        Button btn_demo,btn_frag;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,8 @@ public class DateTimeActivity2 extends AppCompatActivity {
         calendar = Calendar.getInstance();
         dateEdit = findViewById(R.id.date_picker);
         timeEdit = findViewById(R.id.time_picker);
+        btn_demo = findViewById(R.id.open_tab);
+        btn_frag = findViewById(R.id.open_frag);
 
         DatePickerDialog.OnDateSetListener dateClick = new DatePickerDialog.OnDateSetListener() {
             @Override
@@ -94,5 +99,22 @@ public class DateTimeActivity2 extends AppCompatActivity {
                 picker.show();
             }
         });
+
+        btn_demo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DateTimeActivity2.this,TabDemoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_frag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DateTimeActivity2.this,MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
